@@ -27,8 +27,7 @@
 
 ## Metrics of Interest which are printed
 1. Number of parameters in the network
-2. Inference time on (CPU/GPU)
-  * NOTE: For, CPU inference time, run it twice (and use the 2nd value) to make sure the data movement cost from HDD isn't included
+2. Inference time on (CPU/GPU) [NOTE: For, CPU inference time, run it twice (and use the 2nd value) to make sure the data movement cost from HDD isn't included]
 3. The <>pow.txt file shows the nvidia-smi dump for POWER
 
 
