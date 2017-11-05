@@ -1,6 +1,6 @@
 # Running the workloads
 
-### Steps to set up dependancies
+## Steps to set up dependancies
 #### Rerun torch just to make sure your version's the latest one
 1. `git clone git@github.com:Aayush-Ankit/isca_workloads.git`
 2. `luarocks install torch`
@@ -26,10 +26,10 @@
 3. **batch** > can be varied to find the CPU, GPU numbers (inference time, power) variation
 
 ## Metrics of Interest which are printed
-1. number of parameters in the network
+1. Number of parameters in the network
 2. Inference time on (CPU/GPU)
   * NOTE: For, CPU inference time, run it twice (and use the 2nd value) to make sure the data movement cost from HDD isn't included
-3. 
+3. The <>pow.txt file shows the nvidia-smi dump for POWER
 
 
 
