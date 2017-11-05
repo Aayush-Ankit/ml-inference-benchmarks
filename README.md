@@ -20,7 +20,7 @@
 `th <.lua> -gpu <0/1> -threads <non-zero> -batch <non-zero>`
 
 ### cmdline options: 
-1. **gpu**      use 0 for CPU run, 1 for GPU run (default is CPU)
+1. **gpu** > use 0 for CPU run, 1 for GPU run (default is CPU)
 2. **threads**      useful for CPU runs, can increase to evaluate CPU performance (default is 1)
 3. **batch**      can be varied to find the CPU, GPU numbers (inference time, power) variation
 
