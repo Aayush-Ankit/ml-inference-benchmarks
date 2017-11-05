@@ -2,7 +2,7 @@
 
 ### Steps to set up dependancies
 #### Rerun torch just to make sure your version's the latest one
-1. `git clone git@github.com:Aayush-Ankit/isca_workloads.git
+1. `git clone git@github.com:Aayush-Ankit/isca_workloads.git`
 2. `luarocks install torch`
 3. `luarocks install nn`
 4. `luarocks install dpnn`
@@ -20,8 +20,9 @@
 `th <.lua> -gpu <0/1> -threads <non-zero> -batch <non-zero>`
 
 ### cmdline options: 
-1. 'gpu 0 for CPU run, 1 for GPU run'
-2. 'threads -used for CPU runs, can increase to evaluate CPU performance'
+1. *gpu* use 0 for CPU run, 1 for GPU run (default is CPU)
+2. *threads* useful for CPU runs, can increase to evaluate CPU performance (default is 1)
+3. *batch* can be varied to find the CPU, GPU numbers (inference time, power) variation
 
 
 
