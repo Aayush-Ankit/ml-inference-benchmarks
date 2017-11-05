@@ -19,8 +19,8 @@
 #### Running a benchmark on CPU/GPU
 `th <.lua> -gpu <0/1> -threads <non-zero> -batch <non-zero>`
 
-cmdline options: gpu 0 for CPU run, 1 for GPU run
-                 threads -used for CPU runs, can increase to evaluate CPU performance
+cmdline options: 'gpu 0 for CPU run, 1 for GPU run'
+                 'threads -used for CPU runs, can increase to evaluate CPU performance'
 
 
 
