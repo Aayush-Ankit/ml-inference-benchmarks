@@ -13,12 +13,13 @@
 3. `luarocks install cunnx`
 #### Install RNN dependancy (allows using sequencers)
 1. `cd rnn`
-2. `luarocks make rocks/rnn-scm-1.rockspec`
+2. `luarocks make rocks/rnn-scm-1.rockspec
 #### Yay! Setup's Done!!!
 
 #### Running a benchmark on CPU/GPU
-`th <.lua> -gpu <0/1> -threads <non-zero> -batch <non-zero>`
-*gpu 0 for CPU run, 1 for GPU run
+`th <.lua> -gpu <0/1> -threads <non-zero> -batch <non-zero>
+
+cmd optionsgpu 0 for CPU run, 1 for GPU run
 
 
 
