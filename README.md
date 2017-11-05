@@ -17,7 +17,7 @@
 #### Yay! Setup's Done!!!
 
 #### Running a benchmark on CPU/GPU
-`th <.lua> -gpu <0/1> -threads <non-zero> -batch <non-zero>`
+`th <.lua> -gpu <0/1> -threads <non-zero> -batch <non-zero>
 
 cmdline options: 
 1. 'gpu 0 for CPU run, 1 for GPU run'
