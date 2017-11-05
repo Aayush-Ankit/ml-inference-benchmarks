@@ -1,3 +1,3 @@
 # Running the workloads
 
-# Setup dependancies
+## Setup dependancies
