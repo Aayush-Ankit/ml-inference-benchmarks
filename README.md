@@ -14,6 +14,10 @@
 #### Install RNN dependancy (allows using sequencers)
 1. `cd rnn`
 2. `luarocks make rocks/rnn-scm-1.rockspec`
+Note: the above command may break due to proper rnn directory CMakeList cleanup. If that occurs please delete rnn and reclone the directory and run it again. 
+2.a `rm rnn`
+2.b `git clone git@github.com:Element-Research/rnn.git`
+2.c Repeat steps 1 and 2 again
 #### Yay! Setup's Done!!!
 
 
