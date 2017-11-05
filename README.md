@@ -14,4 +14,10 @@
 2. luarocks install cunn
 3. luarocks install cunnx
 
+#### Install RNN dependancy (allows using sequencers)
+1. cd rnn
+2. luarocks make rocks/rnn-scm-1.rockspec
+
+#### Yay! Setup's Done!!!
+
 
