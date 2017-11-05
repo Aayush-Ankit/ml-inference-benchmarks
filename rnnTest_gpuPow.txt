@@ -1,0 +1,23 @@
+
+==============NVSMI LOG==============
+
+Timestamp                           : Sat Nov  4 20:05:30 2017
+Driver Version                      : 370.28
+
+Attached GPUs                       : 1
+GPU 0000:01:00.0
+    Power Readings
+        Power Management            : N/A
+        Power Draw                  : N/A
+        Power Limit                 : N/A
+        Default Power Limit         : N/A
+        Enforced Power Limit        : N/A
+        Min Power Limit             : N/A
+        Max Power Limit             : N/A
+    Power Samples
+        Duration                    : Not Found
+        Number of Samples           : Not Found
+        Max                         : Not Found
+        Min                         : Not Found
+        Avg                         : Not Found
+
