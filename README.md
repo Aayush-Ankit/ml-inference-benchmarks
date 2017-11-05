@@ -29,7 +29,7 @@
 #### cmdline options: 
 1. **gpu** > use 0 for CPU run, 1 for GPU run (default is CPU)
 2. **threads** > useful for CPU runs, can increase to evaluate CPU performance (default is 1)
-3. **batch** > can be varied to find the CPU, GPU numbers (inference time, power) variation
+3. **batch** > can be varied to find the CPU, GPU numbers (inference time, power) variation. FOr GPU, can increase batchsize until torch throws THCudaCheck: out of memory error
 
 ## Metrics of Interest which are printed
 1. Number of parameters in the network
