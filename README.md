@@ -19,10 +19,10 @@
 
 #### Running a benchmark on CPU/GPU
 ## Some info. about the benchmarks
-1. wlm_bigLSTM - bigLSTM network for word-level language modelling (Google 1B dataset) 
-2. wlm_anotherLSTM - another deep LSTM network for word-level language modelling (Google 1B dataset)
-3. nmt_l5.lua - Google Machine Tranalation for English-French (WMT15 dataset)
-3. nmt_l3.lua - Google Machine Tranalation for English-French (WMT15 dataset)
+1. **wlm_bigLSTM** - bigLSTM network for word-level language modelling (Google 1B dataset) 
+2. **wlm_anotherLSTM** - another deep LSTM network for word-level language modelling (Google 1B dataset)
+3. **nmt_l5** - Google Machine Tranalation for English-French (WMT15 dataset)
+3. **nmt_l3** - Google Machine Tranalation for English-French (WMT15 dataset)
 
 `th <.lua> -gpu <0/1> -threads <non-zero> -batch <non-zero>`
 
