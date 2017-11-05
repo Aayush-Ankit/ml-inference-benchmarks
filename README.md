@@ -20,10 +20,16 @@
 #### Running a benchmark on CPU/GPU
 `th <.lua> -gpu <0/1> -threads <non-zero> -batch <non-zero>`
 
-### cmdline options: 
+#### cmdline options: 
 1. **gpu** > use 0 for CPU run, 1 for GPU run (default is CPU)
 2. **threads** > useful for CPU runs, can increase to evaluate CPU performance (default is 1)
 3. **batch** > can be varied to find the CPU, GPU numbers (inference time, power) variation
+
+## Metrics of Interest which are printed
+1. number of parameters in the network
+2. Inference time on (CPU/GPU)
+  * NOTE: For, CPU inference time, run it twice (and use the 2nd value) to make sure the data movement cost from HDD isn't included
+3. 
 
 
 
