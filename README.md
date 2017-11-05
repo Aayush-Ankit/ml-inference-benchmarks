@@ -4,6 +4,14 @@
 #### Rerun torch just to make sure your version's the latest one
 1. `git clone git@github.com:Aayush-Ankit/isca_workloads.git`
 2. `luarocks install torch`
+
+Note: luarocks intall may have an issue with systems seating behind a proxy, so users have to change the git config file to use https:// than git://, so please follow this instructions. 
+
+[url "https://"]  
+    insteadOf = git://
+   
+ Add above statements to your repository gitconfig file "e.g: `vim ~/.gitconfig` " For more information refer to this link --> https://github.com/luarocks/luarocks/wiki/LuaRocks-through-a-proxy
+
 3. `luarocks install nn`
 4. `luarocks install dpnn`
 5. `luarocks install torchx`
@@ -13,16 +21,11 @@
 3. `luarocks install cunnx`
 #### Install RNN dependancy (allows using sequencers)
 1. `cd rnn`
-2. `luarocks make rocks/rnn-scm-1.rockspec`
-
-Note: the above command may break due to no proper rnn directory CMakeList cleanup. If that occurs please delete rnn and reclone the directory and run it again. 
-
-2.a `rm rnn`
-
-2.b `git clone git@github.com:Element-Research/rnn.git`
-
-2.c Repeat steps 1 and 2 again
-
+2. `luarocks make rocks/rnn-scm-1.rockspec`  
+Note: the above command may break due to no proper rnn directory CMakeList cleanup. If that occurs please delete rnn and reclone the directory and run it again.  
+2.a `rm rnn`  
+2.b `git clone git@github.com:Element-Research/rnn.git`  
+2.c Repeat steps 1 and 2 again  
 #### Yay! Setup's Done!!!
 
 
