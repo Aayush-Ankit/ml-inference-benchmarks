@@ -71,6 +71,8 @@ if (opt.gpu == 1) then -- GPU run
   model = model:cuda() -- move the model, i/o data to gpu memory
   input = input:cuda()
   output = output:cuda()
+  cmdstring="nvidia-smi -i 0 --query-gpu=power.limit,power.draw,utilization.gpu,utilization.memory,memory.total,memory.used,memory.free --format=csv,nounits --loop-ms=500> ./wlm_bigLSTM_gpulog_batchsize_%d.txt &"% (batchsize)
+  os.execute(cmdstring)
   -- measure gpu time
   gputime0 = sys.clock()
   run_dnn()
@@ -79,7 +81,7 @@ if (opt.gpu == 1) then -- GPU run
   os.execute ('nvidia-smi -q -d POWER > ./rnnTest_gpuPow.txt')
   gputime = gputime1 - gputime0
   print('GPU Time: '.. (gputime*1000) .. 'ms')
-
+  os.execute('kill -9 `pidof nvidia-smi`')
 else -- CPU run
   -- measure CPU latency
   cputime0 = sys.clock()
