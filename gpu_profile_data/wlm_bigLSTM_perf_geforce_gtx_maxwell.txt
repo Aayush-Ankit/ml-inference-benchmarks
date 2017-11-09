@@ -1,0 +1,93 @@
+***wlm_bigLSTM Benchmarking***
+Usage ./run_gpu_wlm_bigLSTM.sh <typeofgpu> --> e.g: ./run_gpu_wlm_bigLSTM.sh geforce_gtx_maxwell
+**batch size 1**
+Number of parameters	855703552	
+nn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.SeqLSTMP
+  (2): nn.SeqLSTMP
+}
+==> Type is torch.CudaTensor	
+GPU Time: 204.88286018372ms	
+**batch size 16**
+Number of parameters	855703552	
+nn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.SeqLSTMP
+  (2): nn.SeqLSTMP
+}
+==> Type is torch.CudaTensor	
+GPU Time: 257.50613212585ms	
+**batch size 32**
+Number of parameters	855703552	
+nn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.SeqLSTMP
+  (2): nn.SeqLSTMP
+}
+==> Type is torch.CudaTensor	
+GPU Time: 294.34299468994ms	
+**batch size 64**
+Number of parameters	855703552	
+nn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.SeqLSTMP
+  (2): nn.SeqLSTMP
+}
+==> Type is torch.CudaTensor	
+GPU Time: 302.01482772827ms	
+**batch size 128**
+Number of parameters	855703552	
+nn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.SeqLSTMP
+  (2): nn.SeqLSTMP
+}
+==> Type is torch.CudaTensor	
+GPU Time: 473.84905815125ms	
+**batch size 256**
+Number of parameters	855703552	
+nn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.SeqLSTMP
+  (2): nn.SeqLSTMP
+}
+==> Type is torch.CudaTensor	
+GPU Time: 800.11796951294ms	
+**batch size 512**
+Number of parameters	855703552	
+nn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.SeqLSTMP
+  (2): nn.SeqLSTMP
+}
+==> Type is torch.CudaTensor	
+GPU Time: 1514.1291618347ms	
+**batch size 1024**
+Number of parameters	855703552	
+nn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.SeqLSTMP
+  (2): nn.SeqLSTMP
+}
+==> Type is torch.CudaTensor	
+GPU Time: 2967.3609733582ms	
+**batch size 2048**
+Number of parameters	855703552	
+nn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.SeqLSTMP
+  (2): nn.SeqLSTMP
+}
+==> Type is torch.CudaTensor	
+GPU Time: 5852.3581027985ms	
+**batch size 3800**
+Number of parameters	855703552	
+nn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.SeqLSTMP
+  (2): nn.SeqLSTMP
+}
+==> Type is torch.CudaTensor	
+GPU Time: 15267.582893372ms	
+**wlm_bigLSTM can run upto 3800 for a 12GB GPU***
