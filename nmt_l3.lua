@@ -17,6 +17,8 @@ cmd = torch.CmdLine()
 cmd:option('-gpu', 0, 'Run on CPU/GPU')
 cmd:option('-threads', 2, 'Number of threads for CPU')
 cmd:option('-batch', 1, 'Number of batches')
+cmd:option('-gpusample', 500, 'Sampling rate in ms')
+cmd:option('-gputype','nvidia','Type of Nvidia GPU')
 opt = cmd:parse(arg or {})
 torch.setnumthreads(opt.threads)
 
@@ -27,6 +29,8 @@ hiddensize = 1024
 inputsize = 1024 -- inputsize is the length of vector produced after embedding (here would be for english language)
 numlayers = 3
 vocabsize = 40000 -- for decoder language (here french)
+gpusample = opt.gpusample
+gputype = opt.gputype
 
 -- build dnn
 require 'rnn'
@@ -89,7 +93,11 @@ if (opt.gpu == 1) then -- GPU run
   enc_input = enc_input:cuda()
   dec_input = dec_input:cuda()
   output = output:cuda()
-  cmdstring="nvidia-smi -i 0 --query-gpu=power.limit,power.draw,utilization.gpu,utilization.memory,memory.total,memory.used,memory.free --format=csv,nounits --loop-ms=500> ./nmt_l3_gpulog_batchsize_%d.txt &"% (batchsize)
+  cmdstring1="nvidia-smi -i 0 --query-gpu=power.limit,power.draw,utilization.gpu,utilization.memory,memory.total,memory.used,memory.free --format=csv,nounits --loop-ms=%d >" %(gpusample)
+  cmdstring2=" gpu_profile_data/nmt_l3_gpulog_batchsize_%d" %(batchsize)
+  cmdstring3="_sample_ms_%d" %(gpusample)
+  cmdstring4="_%s.txt &" %(gputype)
+  cmdstring=cmdstring1 .. cmdstring2 .. cmdstring3 .. cmdstring4
   os.execute(cmdstring)
   -- measure gpu time
   gputime0 = sys.clock()
