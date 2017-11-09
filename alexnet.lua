@@ -62,10 +62,8 @@ classifier:add(nn.LogSoftMax())
 
 -- augment classifier to feature
 model = nn.Sequential():add(features):add(classifier)
-model.imageSize = 256
-model.imageCrop = 224
 
-num_params_fb1 = 3*48*(11^2) + 48*128*(5*5) + 128*192*(3^2) + 192*192*(3^3) +
+num_params_fb1 = 3*48*(11^2) + 48*128*(5^2) + 128*192*(3^2) + 192*192*(3^2) +
                   192*128*(3^2)
 num_params_classifier =  256*6*6*4096 + 4096*4096 + 4096*1000
 num_params = 2*num_params_fb1 + num_params_classifier
@@ -75,8 +73,7 @@ print (num_params)
 
 -- create input and output tensors
 input = torch.Tensor(batchsize, num_inDim, inputsize, inputsize)
-output = torch.zeros(batchsize, outputsize)
-output = model:forward (input)
+output = torch.Tensor(batchsize, outputsize)
 
 -- dnn inference model
 local run_dnn = function()
