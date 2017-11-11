@@ -1,0 +1,479 @@
+***Alexnext Benchmarking***
+Usage ./run_gpu_alexnet.sh <typeofgpu> --> e.g: ./run_gpu_alexnet.sh geforce_gtx_maxwell
+**batch size 1**
+[?1034hnn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.Concat {
+    input
+      |`-> (1): nn.Sequential {
+      |      [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> (8) -> (9) -> (10) -> (11) -> (12) -> (13) -> output]
+      |      (1): nn.SpatialConvolution(3 -> 48, 11x11, 4,4, 2,2)
+      |      (2): nn.ReLU
+      |      (3): nn.SpatialMaxPooling(3x3, 2,2)
+      |      (4): nn.SpatialConvolution(48 -> 128, 5x5, 1,1, 2,2)
+      |      (5): nn.ReLU
+      |      (6): nn.SpatialMaxPooling(3x3, 2,2)
+      |      (7): nn.SpatialConvolution(128 -> 192, 3x3, 1,1, 1,1)
+      |      (8): nn.ReLU
+      |      (9): nn.SpatialConvolution(192 -> 192, 3x3, 1,1, 1,1)
+      |      (10): nn.ReLU
+      |      (11): nn.SpatialConvolution(192 -> 128, 3x3, 1,1, 1,1)
+      |      (12): nn.ReLU
+      |      (13): nn.SpatialMaxPooling(3x3, 2,2)
+      |    }
+       `-> (2): nn.Sequential {
+             [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> (8) -> (9) -> (10) -> (11) -> (12) -> (13) -> output]
+             (1): nn.SpatialConvolution(3 -> 48, 11x11, 4,4, 2,2)
+             (2): nn.ReLU
+             (3): nn.SpatialMaxPooling(3x3, 2,2)
+             (4): nn.SpatialConvolution(48 -> 128, 5x5, 1,1, 2,2)
+             (5): nn.ReLU
+             (6): nn.SpatialMaxPooling(3x3, 2,2)
+             (7): nn.SpatialConvolution(128 -> 192, 3x3, 1,1, 1,1)
+             (8): nn.ReLU
+             (9): nn.SpatialConvolution(192 -> 192, 3x3, 1,1, 1,1)
+             (10): nn.ReLU
+             (11): nn.SpatialConvolution(192 -> 128, 3x3, 1,1, 1,1)
+             (12): nn.ReLU
+             (13): nn.SpatialMaxPooling(3x3, 2,2)
+           }
+       ... -> output
+  }
+  (2): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
+    (1): nn.View(9216)
+    (2): nn.Linear(9216 -> 4096)
+    (3): nn.ReLU
+    (4): nn.Linear(4096 -> 4096)
+    (5): nn.ReLU
+    (6): nn.Linear(4096 -> 1000)
+    (7): nn.LogSoftMax
+  }
+}
+60512288	
+==> Type is torch.CudaTensor	
+GPU Time: 131.59608840942ms	
+**batch size 16**
+[?1034hnn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.Concat {
+    input
+      |`-> (1): nn.Sequential {
+      |      [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> (8) -> (9) -> (10) -> (11) -> (12) -> (13) -> output]
+      |      (1): nn.SpatialConvolution(3 -> 48, 11x11, 4,4, 2,2)
+      |      (2): nn.ReLU
+      |      (3): nn.SpatialMaxPooling(3x3, 2,2)
+      |      (4): nn.SpatialConvolution(48 -> 128, 5x5, 1,1, 2,2)
+      |      (5): nn.ReLU
+      |      (6): nn.SpatialMaxPooling(3x3, 2,2)
+      |      (7): nn.SpatialConvolution(128 -> 192, 3x3, 1,1, 1,1)
+      |      (8): nn.ReLU
+      |      (9): nn.SpatialConvolution(192 -> 192, 3x3, 1,1, 1,1)
+      |      (10): nn.ReLU
+      |      (11): nn.SpatialConvolution(192 -> 128, 3x3, 1,1, 1,1)
+      |      (12): nn.ReLU
+      |      (13): nn.SpatialMaxPooling(3x3, 2,2)
+      |    }
+       `-> (2): nn.Sequential {
+             [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> (8) -> (9) -> (10) -> (11) -> (12) -> (13) -> output]
+             (1): nn.SpatialConvolution(3 -> 48, 11x11, 4,4, 2,2)
+             (2): nn.ReLU
+             (3): nn.SpatialMaxPooling(3x3, 2,2)
+             (4): nn.SpatialConvolution(48 -> 128, 5x5, 1,1, 2,2)
+             (5): nn.ReLU
+             (6): nn.SpatialMaxPooling(3x3, 2,2)
+             (7): nn.SpatialConvolution(128 -> 192, 3x3, 1,1, 1,1)
+             (8): nn.ReLU
+             (9): nn.SpatialConvolution(192 -> 192, 3x3, 1,1, 1,1)
+             (10): nn.ReLU
+             (11): nn.SpatialConvolution(192 -> 128, 3x3, 1,1, 1,1)
+             (12): nn.ReLU
+             (13): nn.SpatialMaxPooling(3x3, 2,2)
+           }
+       ... -> output
+  }
+  (2): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
+    (1): nn.View(9216)
+    (2): nn.Linear(9216 -> 4096)
+    (3): nn.ReLU
+    (4): nn.Linear(4096 -> 4096)
+    (5): nn.ReLU
+    (6): nn.Linear(4096 -> 1000)
+    (7): nn.LogSoftMax
+  }
+}
+60512288	
+==> Type is torch.CudaTensor	
+GPU Time: 140.62309265137ms	
+**batch size 32**
+[?1034hnn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.Concat {
+    input
+      |`-> (1): nn.Sequential {
+      |      [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> (8) -> (9) -> (10) -> (11) -> (12) -> (13) -> output]
+      |      (1): nn.SpatialConvolution(3 -> 48, 11x11, 4,4, 2,2)
+      |      (2): nn.ReLU
+      |      (3): nn.SpatialMaxPooling(3x3, 2,2)
+      |      (4): nn.SpatialConvolution(48 -> 128, 5x5, 1,1, 2,2)
+      |      (5): nn.ReLU
+      |      (6): nn.SpatialMaxPooling(3x3, 2,2)
+      |      (7): nn.SpatialConvolution(128 -> 192, 3x3, 1,1, 1,1)
+      |      (8): nn.ReLU
+      |      (9): nn.SpatialConvolution(192 -> 192, 3x3, 1,1, 1,1)
+      |      (10): nn.ReLU
+      |      (11): nn.SpatialConvolution(192 -> 128, 3x3, 1,1, 1,1)
+      |      (12): nn.ReLU
+      |      (13): nn.SpatialMaxPooling(3x3, 2,2)
+      |    }
+       `-> (2): nn.Sequential {
+             [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> (8) -> (9) -> (10) -> (11) -> (12) -> (13) -> output]
+             (1): nn.SpatialConvolution(3 -> 48, 11x11, 4,4, 2,2)
+             (2): nn.ReLU
+             (3): nn.SpatialMaxPooling(3x3, 2,2)
+             (4): nn.SpatialConvolution(48 -> 128, 5x5, 1,1, 2,2)
+             (5): nn.ReLU
+             (6): nn.SpatialMaxPooling(3x3, 2,2)
+             (7): nn.SpatialConvolution(128 -> 192, 3x3, 1,1, 1,1)
+             (8): nn.ReLU
+             (9): nn.SpatialConvolution(192 -> 192, 3x3, 1,1, 1,1)
+             (10): nn.ReLU
+             (11): nn.SpatialConvolution(192 -> 128, 3x3, 1,1, 1,1)
+             (12): nn.ReLU
+             (13): nn.SpatialMaxPooling(3x3, 2,2)
+           }
+       ... -> output
+  }
+  (2): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
+    (1): nn.View(9216)
+    (2): nn.Linear(9216 -> 4096)
+    (3): nn.ReLU
+    (4): nn.Linear(4096 -> 4096)
+    (5): nn.ReLU
+    (6): nn.Linear(4096 -> 1000)
+    (7): nn.LogSoftMax
+  }
+}
+60512288	
+==> Type is torch.CudaTensor	
+GPU Time: 152.97484397888ms	
+**batch size 64**
+[?1034hnn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.Concat {
+    input
+      |`-> (1): nn.Sequential {
+      |      [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> (8) -> (9) -> (10) -> (11) -> (12) -> (13) -> output]
+      |      (1): nn.SpatialConvolution(3 -> 48, 11x11, 4,4, 2,2)
+      |      (2): nn.ReLU
+      |      (3): nn.SpatialMaxPooling(3x3, 2,2)
+      |      (4): nn.SpatialConvolution(48 -> 128, 5x5, 1,1, 2,2)
+      |      (5): nn.ReLU
+      |      (6): nn.SpatialMaxPooling(3x3, 2,2)
+      |      (7): nn.SpatialConvolution(128 -> 192, 3x3, 1,1, 1,1)
+      |      (8): nn.ReLU
+      |      (9): nn.SpatialConvolution(192 -> 192, 3x3, 1,1, 1,1)
+      |      (10): nn.ReLU
+      |      (11): nn.SpatialConvolution(192 -> 128, 3x3, 1,1, 1,1)
+      |      (12): nn.ReLU
+      |      (13): nn.SpatialMaxPooling(3x3, 2,2)
+      |    }
+       `-> (2): nn.Sequential {
+             [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> (8) -> (9) -> (10) -> (11) -> (12) -> (13) -> output]
+             (1): nn.SpatialConvolution(3 -> 48, 11x11, 4,4, 2,2)
+             (2): nn.ReLU
+             (3): nn.SpatialMaxPooling(3x3, 2,2)
+             (4): nn.SpatialConvolution(48 -> 128, 5x5, 1,1, 2,2)
+             (5): nn.ReLU
+             (6): nn.SpatialMaxPooling(3x3, 2,2)
+             (7): nn.SpatialConvolution(128 -> 192, 3x3, 1,1, 1,1)
+             (8): nn.ReLU
+             (9): nn.SpatialConvolution(192 -> 192, 3x3, 1,1, 1,1)
+             (10): nn.ReLU
+             (11): nn.SpatialConvolution(192 -> 128, 3x3, 1,1, 1,1)
+             (12): nn.ReLU
+             (13): nn.SpatialMaxPooling(3x3, 2,2)
+           }
+       ... -> output
+  }
+  (2): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
+    (1): nn.View(9216)
+    (2): nn.Linear(9216 -> 4096)
+    (3): nn.ReLU
+    (4): nn.Linear(4096 -> 4096)
+    (5): nn.ReLU
+    (6): nn.Linear(4096 -> 1000)
+    (7): nn.LogSoftMax
+  }
+}
+60512288	
+==> Type is torch.CudaTensor	
+GPU Time: 219.70701217651ms	
+**batch size 128**
+[?1034hnn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.Concat {
+    input
+      |`-> (1): nn.Sequential {
+      |      [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> (8) -> (9) -> (10) -> (11) -> (12) -> (13) -> output]
+      |      (1): nn.SpatialConvolution(3 -> 48, 11x11, 4,4, 2,2)
+      |      (2): nn.ReLU
+      |      (3): nn.SpatialMaxPooling(3x3, 2,2)
+      |      (4): nn.SpatialConvolution(48 -> 128, 5x5, 1,1, 2,2)
+      |      (5): nn.ReLU
+      |      (6): nn.SpatialMaxPooling(3x3, 2,2)
+      |      (7): nn.SpatialConvolution(128 -> 192, 3x3, 1,1, 1,1)
+      |      (8): nn.ReLU
+      |      (9): nn.SpatialConvolution(192 -> 192, 3x3, 1,1, 1,1)
+      |      (10): nn.ReLU
+      |      (11): nn.SpatialConvolution(192 -> 128, 3x3, 1,1, 1,1)
+      |      (12): nn.ReLU
+      |      (13): nn.SpatialMaxPooling(3x3, 2,2)
+      |    }
+       `-> (2): nn.Sequential {
+             [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> (8) -> (9) -> (10) -> (11) -> (12) -> (13) -> output]
+             (1): nn.SpatialConvolution(3 -> 48, 11x11, 4,4, 2,2)
+             (2): nn.ReLU
+             (3): nn.SpatialMaxPooling(3x3, 2,2)
+             (4): nn.SpatialConvolution(48 -> 128, 5x5, 1,1, 2,2)
+             (5): nn.ReLU
+             (6): nn.SpatialMaxPooling(3x3, 2,2)
+             (7): nn.SpatialConvolution(128 -> 192, 3x3, 1,1, 1,1)
+             (8): nn.ReLU
+             (9): nn.SpatialConvolution(192 -> 192, 3x3, 1,1, 1,1)
+             (10): nn.ReLU
+             (11): nn.SpatialConvolution(192 -> 128, 3x3, 1,1, 1,1)
+             (12): nn.ReLU
+             (13): nn.SpatialMaxPooling(3x3, 2,2)
+           }
+       ... -> output
+  }
+  (2): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
+    (1): nn.View(9216)
+    (2): nn.Linear(9216 -> 4096)
+    (3): nn.ReLU
+    (4): nn.Linear(4096 -> 4096)
+    (5): nn.ReLU
+    (6): nn.Linear(4096 -> 1000)
+    (7): nn.LogSoftMax
+  }
+}
+60512288	
+==> Type is torch.CudaTensor	
+GPU Time: 385.3771686554ms	
+**batch size 256**
+[?1034hnn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.Concat {
+    input
+      |`-> (1): nn.Sequential {
+      |      [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> (8) -> (9) -> (10) -> (11) -> (12) -> (13) -> output]
+      |      (1): nn.SpatialConvolution(3 -> 48, 11x11, 4,4, 2,2)
+      |      (2): nn.ReLU
+      |      (3): nn.SpatialMaxPooling(3x3, 2,2)
+      |      (4): nn.SpatialConvolution(48 -> 128, 5x5, 1,1, 2,2)
+      |      (5): nn.ReLU
+      |      (6): nn.SpatialMaxPooling(3x3, 2,2)
+      |      (7): nn.SpatialConvolution(128 -> 192, 3x3, 1,1, 1,1)
+      |      (8): nn.ReLU
+      |      (9): nn.SpatialConvolution(192 -> 192, 3x3, 1,1, 1,1)
+      |      (10): nn.ReLU
+      |      (11): nn.SpatialConvolution(192 -> 128, 3x3, 1,1, 1,1)
+      |      (12): nn.ReLU
+      |      (13): nn.SpatialMaxPooling(3x3, 2,2)
+      |    }
+       `-> (2): nn.Sequential {
+             [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> (8) -> (9) -> (10) -> (11) -> (12) -> (13) -> output]
+             (1): nn.SpatialConvolution(3 -> 48, 11x11, 4,4, 2,2)
+             (2): nn.ReLU
+             (3): nn.SpatialMaxPooling(3x3, 2,2)
+             (4): nn.SpatialConvolution(48 -> 128, 5x5, 1,1, 2,2)
+             (5): nn.ReLU
+             (6): nn.SpatialMaxPooling(3x3, 2,2)
+             (7): nn.SpatialConvolution(128 -> 192, 3x3, 1,1, 1,1)
+             (8): nn.ReLU
+             (9): nn.SpatialConvolution(192 -> 192, 3x3, 1,1, 1,1)
+             (10): nn.ReLU
+             (11): nn.SpatialConvolution(192 -> 128, 3x3, 1,1, 1,1)
+             (12): nn.ReLU
+             (13): nn.SpatialMaxPooling(3x3, 2,2)
+           }
+       ... -> output
+  }
+  (2): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
+    (1): nn.View(9216)
+    (2): nn.Linear(9216 -> 4096)
+    (3): nn.ReLU
+    (4): nn.Linear(4096 -> 4096)
+    (5): nn.ReLU
+    (6): nn.Linear(4096 -> 1000)
+    (7): nn.LogSoftMax
+  }
+}
+60512288	
+==> Type is torch.CudaTensor	
+GPU Time: 605.14879226685ms	
+**batch size 512**
+[?1034hnn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.Concat {
+    input
+      |`-> (1): nn.Sequential {
+      |      [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> (8) -> (9) -> (10) -> (11) -> (12) -> (13) -> output]
+      |      (1): nn.SpatialConvolution(3 -> 48, 11x11, 4,4, 2,2)
+      |      (2): nn.ReLU
+      |      (3): nn.SpatialMaxPooling(3x3, 2,2)
+      |      (4): nn.SpatialConvolution(48 -> 128, 5x5, 1,1, 2,2)
+      |      (5): nn.ReLU
+      |      (6): nn.SpatialMaxPooling(3x3, 2,2)
+      |      (7): nn.SpatialConvolution(128 -> 192, 3x3, 1,1, 1,1)
+      |      (8): nn.ReLU
+      |      (9): nn.SpatialConvolution(192 -> 192, 3x3, 1,1, 1,1)
+      |      (10): nn.ReLU
+      |      (11): nn.SpatialConvolution(192 -> 128, 3x3, 1,1, 1,1)
+      |      (12): nn.ReLU
+      |      (13): nn.SpatialMaxPooling(3x3, 2,2)
+      |    }
+       `-> (2): nn.Sequential {
+             [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> (8) -> (9) -> (10) -> (11) -> (12) -> (13) -> output]
+             (1): nn.SpatialConvolution(3 -> 48, 11x11, 4,4, 2,2)
+             (2): nn.ReLU
+             (3): nn.SpatialMaxPooling(3x3, 2,2)
+             (4): nn.SpatialConvolution(48 -> 128, 5x5, 1,1, 2,2)
+             (5): nn.ReLU
+             (6): nn.SpatialMaxPooling(3x3, 2,2)
+             (7): nn.SpatialConvolution(128 -> 192, 3x3, 1,1, 1,1)
+             (8): nn.ReLU
+             (9): nn.SpatialConvolution(192 -> 192, 3x3, 1,1, 1,1)
+             (10): nn.ReLU
+             (11): nn.SpatialConvolution(192 -> 128, 3x3, 1,1, 1,1)
+             (12): nn.ReLU
+             (13): nn.SpatialMaxPooling(3x3, 2,2)
+           }
+       ... -> output
+  }
+  (2): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
+    (1): nn.View(9216)
+    (2): nn.Linear(9216 -> 4096)
+    (3): nn.ReLU
+    (4): nn.Linear(4096 -> 4096)
+    (5): nn.ReLU
+    (6): nn.Linear(4096 -> 1000)
+    (7): nn.LogSoftMax
+  }
+}
+60512288	
+==> Type is torch.CudaTensor	
+GPU Time: 1141.9339179993ms	
+**batch size 1024**
+[?1034hnn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.Concat {
+    input
+      |`-> (1): nn.Sequential {
+      |      [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> (8) -> (9) -> (10) -> (11) -> (12) -> (13) -> output]
+      |      (1): nn.SpatialConvolution(3 -> 48, 11x11, 4,4, 2,2)
+      |      (2): nn.ReLU
+      |      (3): nn.SpatialMaxPooling(3x3, 2,2)
+      |      (4): nn.SpatialConvolution(48 -> 128, 5x5, 1,1, 2,2)
+      |      (5): nn.ReLU
+      |      (6): nn.SpatialMaxPooling(3x3, 2,2)
+      |      (7): nn.SpatialConvolution(128 -> 192, 3x3, 1,1, 1,1)
+      |      (8): nn.ReLU
+      |      (9): nn.SpatialConvolution(192 -> 192, 3x3, 1,1, 1,1)
+      |      (10): nn.ReLU
+      |      (11): nn.SpatialConvolution(192 -> 128, 3x3, 1,1, 1,1)
+      |      (12): nn.ReLU
+      |      (13): nn.SpatialMaxPooling(3x3, 2,2)
+      |    }
+       `-> (2): nn.Sequential {
+             [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> (8) -> (9) -> (10) -> (11) -> (12) -> (13) -> output]
+             (1): nn.SpatialConvolution(3 -> 48, 11x11, 4,4, 2,2)
+             (2): nn.ReLU
+             (3): nn.SpatialMaxPooling(3x3, 2,2)
+             (4): nn.SpatialConvolution(48 -> 128, 5x5, 1,1, 2,2)
+             (5): nn.ReLU
+             (6): nn.SpatialMaxPooling(3x3, 2,2)
+             (7): nn.SpatialConvolution(128 -> 192, 3x3, 1,1, 1,1)
+             (8): nn.ReLU
+             (9): nn.SpatialConvolution(192 -> 192, 3x3, 1,1, 1,1)
+             (10): nn.ReLU
+             (11): nn.SpatialConvolution(192 -> 128, 3x3, 1,1, 1,1)
+             (12): nn.ReLU
+             (13): nn.SpatialMaxPooling(3x3, 2,2)
+           }
+       ... -> output
+  }
+  (2): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
+    (1): nn.View(9216)
+    (2): nn.Linear(9216 -> 4096)
+    (3): nn.ReLU
+    (4): nn.Linear(4096 -> 4096)
+    (5): nn.ReLU
+    (6): nn.Linear(4096 -> 1000)
+    (7): nn.LogSoftMax
+  }
+}
+60512288	
+==> Type is torch.CudaTensor	
+GPU Time: 2224.2550849915ms	
+**batch size 2048**
+[?1034hnn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.Concat {
+    input
+      |`-> (1): nn.Sequential {
+      |      [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> (8) -> (9) -> (10) -> (11) -> (12) -> (13) -> output]
+      |      (1): nn.SpatialConvolution(3 -> 48, 11x11, 4,4, 2,2)
+      |      (2): nn.ReLU
+      |      (3): nn.SpatialMaxPooling(3x3, 2,2)
+      |      (4): nn.SpatialConvolution(48 -> 128, 5x5, 1,1, 2,2)
+      |      (5): nn.ReLU
+      |      (6): nn.SpatialMaxPooling(3x3, 2,2)
+      |      (7): nn.SpatialConvolution(128 -> 192, 3x3, 1,1, 1,1)
+      |      (8): nn.ReLU
+      |      (9): nn.SpatialConvolution(192 -> 192, 3x3, 1,1, 1,1)
+      |      (10): nn.ReLU
+      |      (11): nn.SpatialConvolution(192 -> 128, 3x3, 1,1, 1,1)
+      |      (12): nn.ReLU
+      |      (13): nn.SpatialMaxPooling(3x3, 2,2)
+      |    }
+       `-> (2): nn.Sequential {
+             [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> (8) -> (9) -> (10) -> (11) -> (12) -> (13) -> output]
+             (1): nn.SpatialConvolution(3 -> 48, 11x11, 4,4, 2,2)
+             (2): nn.ReLU
+             (3): nn.SpatialMaxPooling(3x3, 2,2)
+             (4): nn.SpatialConvolution(48 -> 128, 5x5, 1,1, 2,2)
+             (5): nn.ReLU
+             (6): nn.SpatialMaxPooling(3x3, 2,2)
+             (7): nn.SpatialConvolution(128 -> 192, 3x3, 1,1, 1,1)
+             (8): nn.ReLU
+             (9): nn.SpatialConvolution(192 -> 192, 3x3, 1,1, 1,1)
+             (10): nn.ReLU
+             (11): nn.SpatialConvolution(192 -> 128, 3x3, 1,1, 1,1)
+             (12): nn.ReLU
+             (13): nn.SpatialMaxPooling(3x3, 2,2)
+           }
+       ... -> output
+  }
+  (2): nn.Sequential {
+    [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
+    (1): nn.View(9216)
+    (2): nn.Linear(9216 -> 4096)
+    (3): nn.ReLU
+    (4): nn.Linear(4096 -> 4096)
+    (5): nn.ReLU
+    (6): nn.Linear(4096 -> 1000)
+    (7): nn.LogSoftMax
+  }
+}
+60512288	
+==> Type is torch.CudaTensor	
+GPU Time: 4367.9530620575ms	
