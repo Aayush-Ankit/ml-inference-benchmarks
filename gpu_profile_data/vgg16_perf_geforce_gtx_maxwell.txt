@@ -1,4 +1,4 @@
-***Alexnext Benchmarking***
+***vgg16 Benchmarking***
 Usage ./run_gpu_vgg16.sh <typeofgpu> --> e.g: ./run_gpu_vgg16.sh geforce_gtx_maxwell
 **batch size 1**
 nn.Sequential {

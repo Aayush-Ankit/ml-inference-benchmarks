@@ -1,4 +1,4 @@
-***Alexnext Benchmarking***
+***nmt_l3 Benchmarking***
 Usage ./run_gpu_nmt_l3.sh <typeofgpu> --> e.g: ./run_gpu_nmt_l3.sh geforce_gtx_maxwell
 **batch size 1**
 Number of parameters	91356224	

@@ -1,5 +1,5 @@
 #!/bin/sh
-echo "***Alexnext Benchmarking***"
+echo "***vgg16 Benchmarking***"
 echo "Usage ./run_gpu_vgg16.sh <typeofgpu> --> e.g: ./run_gpu_vgg16.sh geforce_gtx_maxwell"
 #batch size 1
 echo "**batch size 1**"

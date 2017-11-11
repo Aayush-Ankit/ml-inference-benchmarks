@@ -1,5 +1,5 @@
 #!/bin/sh
-echo "***Alexnext Benchmarking***"
+echo "***mlp_l4 Benchmarking***"
 echo "Usage ./run_gpu_mlp_l4.sh <typeofgpu> --> e.g: ./run_gpu_mlp_l4.sh geforce_gtx_maxwell"
 #batch size 1
 echo "**batch size 1**"
