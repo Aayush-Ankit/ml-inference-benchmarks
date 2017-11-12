@@ -1,0 +1,170 @@
+***mlp_l4 Benchmarking***
+Usage ./run_cpu_mlp_l4.sh <numberofthreads> --> e.g: ./run_cpu_mlp_l4.sh 4
+**batch size 1**
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
+  (1): nn.Linear(1024 -> 1024)
+  (2): nn.Sigmoid
+  (3): nn.Linear(1024 -> 2048)
+  (4): nn.Sigmoid
+  (5): nn.Linear(2048 -> 1024)
+  (6): nn.Sigmoid
+  (7): nn.Linear(1024 -> 10)
+}
+5257226	
+==> Type is torch.FloatTensor	
+CPU Time: 7.7230930328369ms	
+**batch size 16**
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
+  (1): nn.Linear(1024 -> 1024)
+  (2): nn.Sigmoid
+  (3): nn.Linear(1024 -> 2048)
+  (4): nn.Sigmoid
+  (5): nn.Linear(2048 -> 1024)
+  (6): nn.Sigmoid
+  (7): nn.Linear(1024 -> 10)
+}
+5257226	
+==> Type is torch.FloatTensor	
+CPU Time: 110.15892028809ms	
+**batch size 32**
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
+  (1): nn.Linear(1024 -> 1024)
+  (2): nn.Sigmoid
+  (3): nn.Linear(1024 -> 2048)
+  (4): nn.Sigmoid
+  (5): nn.Linear(2048 -> 1024)
+  (6): nn.Sigmoid
+  (7): nn.Linear(1024 -> 10)
+}
+5257226	
+==> Type is torch.FloatTensor	
+CPU Time: 178.54809761047ms	
+**batch size 64**
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
+  (1): nn.Linear(1024 -> 1024)
+  (2): nn.Sigmoid
+  (3): nn.Linear(1024 -> 2048)
+  (4): nn.Sigmoid
+  (5): nn.Linear(2048 -> 1024)
+  (6): nn.Sigmoid
+  (7): nn.Linear(1024 -> 10)
+}
+5257226	
+==> Type is torch.FloatTensor	
+CPU Time: 338.12999725342ms	
+**batch size 128**
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
+  (1): nn.Linear(1024 -> 1024)
+  (2): nn.Sigmoid
+  (3): nn.Linear(1024 -> 2048)
+  (4): nn.Sigmoid
+  (5): nn.Linear(2048 -> 1024)
+  (6): nn.Sigmoid
+  (7): nn.Linear(1024 -> 10)
+}
+5257226	
+==> Type is torch.FloatTensor	
+CPU Time: 676.00917816162ms	
+**batch size 256**
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
+  (1): nn.Linear(1024 -> 1024)
+  (2): nn.Sigmoid
+  (3): nn.Linear(1024 -> 2048)
+  (4): nn.Sigmoid
+  (5): nn.Linear(2048 -> 1024)
+  (6): nn.Sigmoid
+  (7): nn.Linear(1024 -> 10)
+}
+5257226	
+==> Type is torch.FloatTensor	
+CPU Time: 1353.0149459839ms	
+**batch size 512**
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
+  (1): nn.Linear(1024 -> 1024)
+  (2): nn.Sigmoid
+  (3): nn.Linear(1024 -> 2048)
+  (4): nn.Sigmoid
+  (5): nn.Linear(2048 -> 1024)
+  (6): nn.Sigmoid
+  (7): nn.Linear(1024 -> 10)
+}
+5257226	
+==> Type is torch.FloatTensor	
+CPU Time: 2709.7101211548ms	
+**batch size 1024**
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
+  (1): nn.Linear(1024 -> 1024)
+  (2): nn.Sigmoid
+  (3): nn.Linear(1024 -> 2048)
+  (4): nn.Sigmoid
+  (5): nn.Linear(2048 -> 1024)
+  (6): nn.Sigmoid
+  (7): nn.Linear(1024 -> 10)
+}
+5257226	
+==> Type is torch.FloatTensor	
+CPU Time: 5417.2749519348ms	
+**batch size 2048**
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
+  (1): nn.Linear(1024 -> 1024)
+  (2): nn.Sigmoid
+  (3): nn.Linear(1024 -> 2048)
+  (4): nn.Sigmoid
+  (5): nn.Linear(2048 -> 1024)
+  (6): nn.Sigmoid
+  (7): nn.Linear(1024 -> 10)
+}
+5257226	
+==> Type is torch.FloatTensor	
+CPU Time: 10828.753948212ms	
+**batch size 4096**
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
+  (1): nn.Linear(1024 -> 1024)
+  (2): nn.Sigmoid
+  (3): nn.Linear(1024 -> 2048)
+  (4): nn.Sigmoid
+  (5): nn.Linear(2048 -> 1024)
+  (6): nn.Sigmoid
+  (7): nn.Linear(1024 -> 10)
+}
+5257226	
+==> Type is torch.FloatTensor	
+CPU Time: 22553.353786469ms	
+**batch size 8192**
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
+  (1): nn.Linear(1024 -> 1024)
+  (2): nn.Sigmoid
+  (3): nn.Linear(1024 -> 2048)
+  (4): nn.Sigmoid
+  (5): nn.Linear(2048 -> 1024)
+  (6): nn.Sigmoid
+  (7): nn.Linear(1024 -> 10)
+}
+5257226	
+==> Type is torch.FloatTensor	
+CPU Time: 47172.112941742ms	
+**batch size 16384**
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
+  (1): nn.Linear(1024 -> 1024)
+  (2): nn.Sigmoid
+  (3): nn.Linear(1024 -> 2048)
+  (4): nn.Sigmoid
+  (5): nn.Linear(2048 -> 1024)
+  (6): nn.Sigmoid
+  (7): nn.Linear(1024 -> 10)
+}
+5257226	
+==> Type is torch.FloatTensor	
+CPU Time: 94217.649936676ms	
