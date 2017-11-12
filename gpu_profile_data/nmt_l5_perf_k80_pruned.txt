@@ -1,0 +1,36 @@
+***nmt_l5 Benchmarking***
+
+**batch size 1**
+
+GPU Time: 3177.2048473358ms	
+
+**batch size 16**
+
+GPU Time: 9737.1909618378ms	
+
+**batch size 32**
+
+GPU Time: 9847.0921516418ms	
+
+**batch size 64**
+
+GPU Time: 10383.611917496ms	
+
+**batch size 128**
+
+GPU Time: 15665.201187134ms	
+
+**batch size 256**
+
+GPU Time: 30582.88192749ms	
+
+**batch size 512**
+
+GPU Time: 54852.22697258ms	
+
+**batch size 750**
+
+GPU Time: 77147.134065628ms	
+
+Batch size of 750 is the largest that ran on the 12GB GPU
+

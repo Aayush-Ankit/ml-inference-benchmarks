@@ -1,0 +1,22 @@
+***vgg16 Benchmarking***
+
+**batch size 1**
+
+GPU Time: 88.565111160278ms	
+
+**batch size 16**
+
+GPU Time: 175.77481269836ms	
+
+**batch size 32**
+
+GPU Time: 212.06307411194ms	
+
+**batch size 64**
+
+GPU Time: 533.86378288269ms	
+
+**batch size 128**
+
+GPU Time: 1167.6139831543ms	
+

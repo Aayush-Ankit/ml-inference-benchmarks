@@ -1,0 +1,50 @@
+***mlp_l5 Benchmarking***
+
+**batch size 1**
+
+GPU Time: 71.623802185059ms	
+
+**batch size 16**
+
+GPU Time: 72.072982788086ms	
+
+**batch size 32**
+
+GPU Time: 71.352005004883ms	
+
+**batch size 64**
+
+GPU Time: 71.556091308594ms	
+
+**batch size 128**
+
+GPU Time: 72.806835174561ms	
+
+**batch size 256**
+
+GPU Time: 73.381900787354ms	
+
+**batch size 512**
+
+GPU Time: 73.574066162109ms	
+
+**batch size 1024**
+
+GPU Time: 72.420835494995ms	
+
+**batch size 2048**
+
+GPU Time: 76.375007629395ms	
+
+**batch size 4096**
+
+GPU Time: 77.452898025513ms	
+
+**batch size 8192**
+
+GPU Time: 79.909086227417ms	
+
+**batch size 16384**
+
+GPU Time: 83.742141723633ms	
+

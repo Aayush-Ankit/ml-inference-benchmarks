@@ -1,0 +1,42 @@
+***wlm_anotherLSTM Benchmarking***
+
+**batch size 1**
+
+GPU Time: 133.75401496887ms	
+
+**batch size 16**
+
+GPU Time: 144.23489570618ms	
+
+**batch size 32**
+
+GPU Time: 153.80787849426ms	
+
+**batch size 64**
+
+GPU Time: 149.48487281799ms	
+
+**batch size 128**
+
+GPU Time: 147.00889587402ms	
+
+**batch size 256**
+
+GPU Time: 152.81391143799ms	
+
+**batch size 512**
+
+GPU Time: 269.17815208435ms	
+
+**batch size 1024**
+
+GPU Time: 1104.6278476715ms	
+
+**batch size 2048**
+
+GPU Time: 2155.797958374ms	
+
+**batch size 4096**
+
+GPU Time: 7132.8780651093ms	
+

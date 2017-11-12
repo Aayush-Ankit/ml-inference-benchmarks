@@ -1,0 +1,6 @@
+batchsize,util_gpu_pwr,total_gpu_pwr,gpu_util,gpu_memory_size,gpu_used_memory_gpu_free_memory
+128,151,149,24,1,12205,1327
+16,62,149,46,2,12205,1262
+1,71,149,9,0,12205,1271
+32,138,149,13,0,12205,1271
+64,148,149,24,4,12205,1289

@@ -1,0 +1,38 @@
+***Alexnet Benchmarking***
+
+**batch size 1**
+
+GPU Time: 131.59608840942ms	
+
+**batch size 16**
+
+GPU Time: 140.62309265137ms	
+
+**batch size 32**
+
+GPU Time: 152.97484397888ms	
+
+**batch size 64**
+
+GPU Time: 219.70701217651ms	
+
+**batch size 128**
+
+GPU Time: 385.3771686554ms	
+
+**batch size 256**
+
+GPU Time: 605.14879226685ms	
+
+**batch size 512**
+
+GPU Time: 1141.9339179993ms	
+
+**batch size 1024**
+
+GPU Time: 2224.2550849915ms	
+
+**batch size 2048**
+
+GPU Time: 4367.9530620575ms	
+
