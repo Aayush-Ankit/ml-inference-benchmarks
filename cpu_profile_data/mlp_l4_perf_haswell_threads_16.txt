@@ -13,7 +13,7 @@ nn.Sequential {
 }
 5257226	
 ==> Type is torch.FloatTensor	
-CPU Time: 7.0121288299561ms	
+CPU Time: 6.1798095703125ms	
 **batch size 16**
 nn.Sequential {
   [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
@@ -27,7 +27,7 @@ nn.Sequential {
 }
 5257226	
 ==> Type is torch.FloatTensor	
-CPU Time: 107.46383666992ms	
+CPU Time: 10.446071624756ms	
 **batch size 32**
 nn.Sequential {
   [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
@@ -41,7 +41,7 @@ nn.Sequential {
 }
 5257226	
 ==> Type is torch.FloatTensor	
-CPU Time: 168.97082328796ms	
+CPU Time: 16.690969467163ms	
 **batch size 64**
 nn.Sequential {
   [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
@@ -55,7 +55,7 @@ nn.Sequential {
 }
 5257226	
 ==> Type is torch.FloatTensor	
-CPU Time: 338.56010437012ms	
+CPU Time: 37.079095840454ms	
 **batch size 128**
 nn.Sequential {
   [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
@@ -69,7 +69,7 @@ nn.Sequential {
 }
 5257226	
 ==> Type is torch.FloatTensor	
-CPU Time: 679.09789085388ms	
+CPU Time: 40.36808013916ms	
 **batch size 256**
 nn.Sequential {
   [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
@@ -83,7 +83,7 @@ nn.Sequential {
 }
 5257226	
 ==> Type is torch.FloatTensor	
-CPU Time: 1370.1369762421ms	
+CPU Time: 45.074939727783ms	
 **batch size 512**
 nn.Sequential {
   [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
@@ -97,7 +97,7 @@ nn.Sequential {
 }
 5257226	
 ==> Type is torch.FloatTensor	
-CPU Time: 2719.8770046234ms	
+CPU Time: 70.227861404419ms	
 **batch size 1024**
 nn.Sequential {
   [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
@@ -111,7 +111,7 @@ nn.Sequential {
 }
 5257226	
 ==> Type is torch.FloatTensor	
-CPU Time: 5412.770986557ms	
+CPU Time: 125.42295455933ms	
 **batch size 2048**
 nn.Sequential {
   [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
@@ -125,7 +125,7 @@ nn.Sequential {
 }
 5257226	
 ==> Type is torch.FloatTensor	
-CPU Time: 10822.21198082ms	
+CPU Time: 250.58794021606ms	
 **batch size 4096**
 nn.Sequential {
   [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
@@ -139,7 +139,7 @@ nn.Sequential {
 }
 5257226	
 ==> Type is torch.FloatTensor	
-CPU Time: 22684.678077698ms	
+CPU Time: 432.66606330872ms	
 **batch size 8192**
 nn.Sequential {
   [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
@@ -153,7 +153,7 @@ nn.Sequential {
 }
 5257226	
 ==> Type is torch.FloatTensor	
-CPU Time: 46988.562822342ms	
+CPU Time: 731.39715194702ms	
 **batch size 16384**
 nn.Sequential {
   [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
@@ -167,4 +167,4 @@ nn.Sequential {
 }
 5257226	
 ==> Type is torch.FloatTensor	
-CPU Time: 94598.036050797ms	
+CPU Time: 1397.7150917053ms	
