@@ -1,0 +1,7 @@
+alexnet --> 330 to 360W (peak) 125W(idle avg)
+mlp_l4 --> 410 to 426 W (peak)
+mlp_l5 --> 410 to 426 W (peak)
+nmt_l3 --> 350 to 420 W (peak)
+nmt_l5 --> 350 to 360 W (peak)
+
+
