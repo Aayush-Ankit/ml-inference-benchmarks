@@ -1,0 +1,92 @@
+***wlm_bigLSTM Benchmarking***
+Usage ./run_cpu_wlm_bigLSTM.sh <numberofthreads> --> e.g: ./run_cpu_wlm_bigLSTM.sh 4
+**batch size 1**
+Number of parameters	855703552	
+nn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.SeqLSTMP
+  (2): nn.SeqLSTMP
+}
+==> Type is torch.FloatTensor	
+CPU Time: 81720.710039139ms	
+**batch size 16**
+Number of parameters	855703552	
+nn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.SeqLSTMP
+  (2): nn.SeqLSTMP
+}
+==> Type is torch.FloatTensor	
+CPU Time: 90402.473926544ms	
+**batch size 32**
+Number of parameters	855703552	
+nn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.SeqLSTMP
+  (2): nn.SeqLSTMP
+}
+==> Type is torch.FloatTensor	
+CPU Time: 103288.46883774ms	
+**batch size 64**
+Number of parameters	855703552	
+nn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.SeqLSTMP
+  (2): nn.SeqLSTMP
+}
+==> Type is torch.FloatTensor	
+CPU Time: 124107.56707191ms	
+**batch size 128**
+Number of parameters	855703552	
+nn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.SeqLSTMP
+  (2): nn.SeqLSTMP
+}
+==> Type is torch.FloatTensor	
+CPU Time: 156105.64303398ms	
+**batch size 256**
+Number of parameters	855703552	
+nn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.SeqLSTMP
+  (2): nn.SeqLSTMP
+}
+==> Type is torch.FloatTensor	
+CPU Time: 45778.192996979ms	
+**batch size 512**
+Number of parameters	855703552	
+nn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.SeqLSTMP
+  (2): nn.SeqLSTMP
+}
+==> Type is torch.FloatTensor	
+CPU Time: 59927.385091782ms	
+**batch size 1024**
+Number of parameters	855703552	
+nn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.SeqLSTMP
+  (2): nn.SeqLSTMP
+}
+==> Type is torch.FloatTensor	
+CPU Time: 91847.033977509ms	
+**batch size 2048**
+Number of parameters	855703552	
+nn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.SeqLSTMP
+  (2): nn.SeqLSTMP
+}
+==> Type is torch.FloatTensor	
+CPU Time: 156197.37911224ms	
+**batch size 3800**
+Number of parameters	855703552	
+nn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.SeqLSTMP
+  (2): nn.SeqLSTMP
+}
+==> Type is torch.FloatTensor	
+CPU Time: 266651.74198151ms	

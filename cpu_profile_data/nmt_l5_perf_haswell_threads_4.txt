@@ -20,7 +20,7 @@ nn.Sequential {
   (6): nn.Sequencer @ nn.Recursor @ nn.Linear(1024 -> 40000)
 }
 ==> Type is torch.FloatTensor	
-CPU Time: 400169.83795166ms	
+CPU Time: 398441.76101685ms	
 **batch size 16**
 Number of parameters	124927040	
 nn.Sequential {
@@ -41,7 +41,7 @@ nn.Sequential {
   (6): nn.Sequencer @ nn.Recursor @ nn.Linear(1024 -> 40000)
 }
 ==> Type is torch.FloatTensor	
-CPU Time: 509029.95896339ms	
+CPU Time: 509501.37686729ms	
 **batch size 32**
 Number of parameters	124927040	
 nn.Sequential {
@@ -62,7 +62,7 @@ nn.Sequential {
   (6): nn.Sequencer @ nn.Recursor @ nn.Linear(1024 -> 40000)
 }
 ==> Type is torch.FloatTensor	
-CPU Time: 619228.73401642ms	
+CPU Time: 622449.87416267ms	
 **batch size 64**
 Number of parameters	124927040	
 nn.Sequential {
@@ -83,7 +83,7 @@ nn.Sequential {
   (6): nn.Sequencer @ nn.Recursor @ nn.Linear(1024 -> 40000)
 }
 ==> Type is torch.FloatTensor	
-CPU Time: 823577.84891129ms	
+CPU Time: 820688.04907799ms	
 **batch size 128**
 Number of parameters	124927040	
 nn.Sequential {
@@ -104,7 +104,7 @@ nn.Sequential {
   (6): nn.Sequencer @ nn.Recursor @ nn.Linear(1024 -> 40000)
 }
 ==> Type is torch.FloatTensor	
-CPU Time: 1231814.9600029ms	
+CPU Time: 1250439.811945ms	
 **batch size 256**
 Number of parameters	124927040	
 nn.Sequential {
@@ -125,7 +125,7 @@ nn.Sequential {
   (6): nn.Sequencer @ nn.Recursor @ nn.Linear(1024 -> 40000)
 }
 ==> Type is torch.FloatTensor	
-CPU Time: 390138.45586777ms	
+CPU Time: 397779.11090851ms	
 **batch size 512**
 Number of parameters	124927040	
 nn.Sequential {
@@ -146,7 +146,7 @@ nn.Sequential {
   (6): nn.Sequencer @ nn.Recursor @ nn.Linear(1024 -> 40000)
 }
 ==> Type is torch.FloatTensor	
-CPU Time: 694490.19217491ms	
+CPU Time: 699740.11111259ms	
 **batch size 750**
 Number of parameters	124927040	
 nn.Sequential {
@@ -167,4 +167,4 @@ nn.Sequential {
   (6): nn.Sequencer @ nn.Recursor @ nn.Linear(1024 -> 40000)
 }
 ==> Type is torch.FloatTensor	
-CPU Time: 987947.81684875ms	
+CPU Time: 991261.48104668ms	
