@@ -1,0 +1,5 @@
+alexnet --> 250W (Avg)
+mlp_l4 --> 350W (Avg)
+mlp_l5 --> 300W (Avg)
+nmt_l3 --> 600W (peak)
+nmt_l5 --> 600W (peak)
