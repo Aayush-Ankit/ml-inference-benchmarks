@@ -8,7 +8,7 @@ nn.Sequential {
   (2): nn.SeqLSTMP
 }
 ==> Type is torch.FloatTensor	
-CPU Time: 60508.301019669ms	
+CPU Time: 60180.191993713ms	
 **batch size 16**
 Number of parameters	855703552	
 nn.Sequential {
@@ -17,7 +17,7 @@ nn.Sequential {
   (2): nn.SeqLSTMP
 }
 ==> Type is torch.FloatTensor	
-CPU Time: 70643.559932709ms	
+CPU Time: 70578.726053238ms	
 **batch size 32**
 Number of parameters	855703552	
 nn.Sequential {
@@ -26,7 +26,7 @@ nn.Sequential {
   (2): nn.SeqLSTMP
 }
 ==> Type is torch.FloatTensor	
-CPU Time: 74957.286119461ms	
+CPU Time: 75776.736021042ms	
 **batch size 64**
 Number of parameters	855703552	
 nn.Sequential {
@@ -35,7 +35,7 @@ nn.Sequential {
   (2): nn.SeqLSTMP
 }
 ==> Type is torch.FloatTensor	
-CPU Time: 89964.06006813ms	
+CPU Time: 89147.174835205ms	
 **batch size 128**
 Number of parameters	855703552	
 nn.Sequential {
@@ -44,7 +44,7 @@ nn.Sequential {
   (2): nn.SeqLSTMP
 }
 ==> Type is torch.FloatTensor	
-CPU Time: 119942.85106659ms	
+CPU Time: 121352.23913193ms	
 **batch size 256**
 Number of parameters	855703552	
 nn.Sequential {
@@ -53,7 +53,7 @@ nn.Sequential {
   (2): nn.SeqLSTMP
 }
 ==> Type is torch.FloatTensor	
-CPU Time: 27648.434877396ms	
+CPU Time: 29226.413011551ms	
 **batch size 512**
 Number of parameters	855703552	
 nn.Sequential {
@@ -62,7 +62,7 @@ nn.Sequential {
   (2): nn.SeqLSTMP
 }
 ==> Type is torch.FloatTensor	
-CPU Time: 43278.711795807ms	
+CPU Time: 46054.421186447ms	
 **batch size 1024**
 Number of parameters	855703552	
 nn.Sequential {
@@ -71,7 +71,7 @@ nn.Sequential {
   (2): nn.SeqLSTMP
 }
 ==> Type is torch.FloatTensor	
-CPU Time: 85515.685081482ms	
+CPU Time: 82347.577095032ms	
 **batch size 2048**
 Number of parameters	855703552	
 nn.Sequential {
@@ -80,7 +80,7 @@ nn.Sequential {
   (2): nn.SeqLSTMP
 }
 ==> Type is torch.FloatTensor	
-CPU Time: 148943.05992126ms	
+CPU Time: 144315.27686119ms	
 **batch size 3800**
 Number of parameters	855703552	
 nn.Sequential {
@@ -89,4 +89,4 @@ nn.Sequential {
   (2): nn.SeqLSTMP
 }
 ==> Type is torch.FloatTensor	
-CPU Time: 281372.63703346ms	
+CPU Time: 264285.83598137ms	
