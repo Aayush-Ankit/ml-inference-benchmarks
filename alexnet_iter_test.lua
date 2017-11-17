@@ -106,9 +106,8 @@ if (opt.gpu == 1) then -- GPU run
 	  run_dnn()
 	  gputime1 = sys.clock()
 	  -- run nvidia-smi for gpu power (Think about the placment of this later?)
-	  gputime[i]= gputime1 - gputime0
---          gputime_sec[i]=gputime[i]*1000
-          print(i .. ' ' .. (gputime[i]*1000)..' ms')
+	  gputime= gputime1 - gputime0
+          print(i .. ' ' .. (gputime*1000)..' ms')
   end
  -- gputime_sec=gputime*1000
   --print('GPU Time: '.. (gputime_sec[0]) .. 'ms')
