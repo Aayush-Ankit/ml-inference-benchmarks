@@ -1,4 +1,4 @@
-# Install script for directory: /home/aa/dpe_isca/workloads/rnn/test
+# Install script for directory: /home/aa/isca_workloads/rnn/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,10 +34,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/luarocks/rocks/rnn/scm-1/lua/rnn/test" TYPE FILE FILES
-    "/home/aa/dpe_isca/workloads/rnn/test/GRU_test.lua"
-    "/home/aa/dpe_isca/workloads/rnn/test/bigtest.lua"
-    "/home/aa/dpe_isca/workloads/rnn/test/test_trimzero.lua"
-    "/home/aa/dpe_isca/workloads/rnn/test/test.lua"
+    "/home/aa/isca_workloads/rnn/test/GRU_test.lua"
+    "/home/aa/isca_workloads/rnn/test/bigtest.lua"
+    "/home/aa/isca_workloads/rnn/test/test_trimzero.lua"
+    "/home/aa/isca_workloads/rnn/test/test.lua"
     )
 endif()
 

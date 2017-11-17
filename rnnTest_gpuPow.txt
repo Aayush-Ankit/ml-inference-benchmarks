@@ -1,7 +1,7 @@
 
 ==============NVSMI LOG==============
 
-Timestamp                           : Sat Nov  4 20:05:30 2017
+Timestamp                           : Wed Nov  8 22:22:03 2017
 Driver Version                      : 370.28
 
 Attached GPUs                       : 1

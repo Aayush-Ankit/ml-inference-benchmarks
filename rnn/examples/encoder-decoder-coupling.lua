@@ -75,7 +75,6 @@ end
 dec:add(nn.Sequencer(nn.MaskZero(nn.Linear(opt.hiddenSize, opt.vocabSize), 1)))
 dec:add(nn.Sequencer(nn.MaskZero(nn.LogSoftMax(), 1)))
 
-
 local criterion = nn.SequencerCriterion(nn.MaskZeroCriterion(nn.ClassNLLCriterion(),1))
 
 -- Some example data (batchsize = 2) with variable length input and output sequences

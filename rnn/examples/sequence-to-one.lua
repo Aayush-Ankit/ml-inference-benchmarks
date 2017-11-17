@@ -1,6 +1,6 @@
 require 'rnn'
 
--- hyper-parameters
+-- hyper-parameters 
 batchSize = 8
 rho = 10 -- sequence length
 hiddenSize = 100
@@ -11,8 +11,8 @@ lr = 0.1
 
 -- build simple recurrent neural network
 r = nn.Recurrent(
-   hiddenSize, nn.Identity(),
-   nn.Linear(hiddenSize, hiddenSize), nn.Sigmoid(),
+   hiddenSize, nn.Identity(), 
+   nn.Linear(hiddenSize, hiddenSize), nn.Sigmoid(), 
    rho
 )
 
@@ -55,26 +55,26 @@ indices:resize(batchSize)
 local inputs, targets = torch.LongTensor(), torch.LongTensor()
 for iteration = 1, 1000 do
    -- 1. create a sequence of rho time-steps
-
+   
    indices:random(1,ds.size) -- choose some random samples
    inputs:index(ds.input, 1,indices)
    targets:index(ds.target, 1,indices)
-
+   
    -- 2. forward sequence through rnn
-
-   rnn:zeroGradParameters()
-
+   
+   rnn:zeroGradParameters() 
+   
    local outputs = rnn:forward(inputs)
    local err = criterion:forward(outputs, targets)
-
+   
    print(string.format("Iteration %d ; NLL err = %f ", iteration, err))
 
    -- 3. backward sequence through rnn (i.e. backprop through time)
-
+   
    local gradOutputs = criterion:backward(outputs, targets)
    local gradInputs = rnn:backward(inputs, gradOutputs)
-
+   
    -- 4. update
-
+   
    rnn:updateParameters(lr)
 end
