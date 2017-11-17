@@ -30,8 +30,6 @@ gpusample = opt.gpusample
 gputype = opt.gputype
 iter    = opt.iter
 --local gputime = 0
-gputime = {} --array test
-gputime_sec = {}
 -- build dnn
 require 'nn'
 local num_params = 0
