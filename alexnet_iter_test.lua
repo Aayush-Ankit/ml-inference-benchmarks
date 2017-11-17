@@ -17,6 +17,7 @@ cmd:option('-threads', 2, 'Number of threads for CPU')
 cmd:option('-batch', 1, 'Number of batches')
 cmd:option('-gpusample', 500, 'Sampling rate in ms')
 cmd:option('-gputype','nvidia','Type of Nvidia GPU')
+cmd:option('-iter','100','Number of Iterations to run the test')
 opt = cmd:parse(arg or {})
 torch.setnumthreads(opt.threads)
 
@@ -27,6 +28,7 @@ inputsize = 224
 outputsize = 1000
 gpusample = opt.gpusample
 gputype = opt.gputype
+iter    = opt.iter
 --local gputime = 0
 gputime = {} --array test
 gputime_sec = {}
@@ -74,8 +76,8 @@ num_params_fb1 = 3*48*(11^2) + 48*128*(5^2) + 128*192*(3^2) + 192*192*(3^2) +
 num_params_classifier =  256*6*6*4096 + 4096*4096 + 4096*1000
 num_params = 2*num_params_fb1 + num_params_classifier
 
-print (model)
-print (num_params)
+--print (model)
+--print (num_params)
 
 -- create input and output tensors
 input = torch.Tensor(batchsize, num_inDim, inputsize, inputsize)
@@ -83,7 +85,7 @@ output = torch.Tensor(batchsize, outputsize)
 
 -- dnn inference model
 local run_dnn = function()
-    print('==> Type is '..input:type())
+--    print('==> Type is '..input:type())
     output = model:forward(input)
 end
 
@@ -93,6 +95,7 @@ if (opt.gpu == 1) then -- GPU run
   model = model:cuda() -- move the model, i/o data to gpu memory
   input = input:cuda()
   output = output:cuda()
+  print '****GPU Data (iteration time in ms)****'
   cmdstring1="nvidia-smi -i 0 --query-gpu=power.limit,power.draw,utilization.gpu,utilization.memory,memory.total,memory.used,memory.free --format=csv,nounits --loop-ms=%d >" %(gpusample)
   cmdstring2=" gpu_profile_data/alexnet_gpulog_batchsize_%d" %(batchsize)
   cmdstring3="_sample_ms_%d" %(gpusample)
@@ -100,23 +103,26 @@ if (opt.gpu == 1) then -- GPU run
   cmdstring=cmdstring1 .. cmdstring2 .. cmdstring3 .. cmdstring4
   os.execute(cmdstring)
   -- measure gpu time
-  for i = 1,100 do 
+  for i = 1,iter do 
 	  gputime0 = sys.clock()
 	  run_dnn()
 	  gputime1 = sys.clock()
 	  -- run nvidia-smi for gpu power (Think about the placment of this later?)
 	  gputime[i]= gputime1 - gputime0
-          gputime_sec[i]=gputime[i]*1000
-          print('GPU Time: '..(gputime[i]*1000)..'ms')
+--          gputime_sec[i]=gputime[i]*1000
+          print(i .. ' ' .. (gputime[i]*1000)..' ms')
   end
  -- gputime_sec=gputime*1000
   --print('GPU Time: '.. (gputime_sec[0]) .. 'ms')
   os.execute('kill -9 `pidof nvidia-smi`')
 else -- CPU run
   -- measure CPU latency
-  cputime0 = sys.clock()
-  run_dnn()
-  cputime1 = sys.clock()
-  cputime = cputime1 - cputime0
-  print('CPU Time: '.. (cputime*1000) .. 'ms')
+  print '****CPU Data (iteration time in ms)****'
+  for i = 1,iter do
+	  cputime0 = sys.clock()
+	  run_dnn()
+	  cputime1 = sys.clock()
+	  cputime = cputime1 - cputime0
+	  print(i.. ' '.. (cputime*1000) .. ' ms')
+  end
 end
