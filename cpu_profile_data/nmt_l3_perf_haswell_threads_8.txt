@@ -1,0 +1,138 @@
+***nmt_l3 Benchmarking***
+Usage ./run_cpu_nmt_l3.sh <numberofthreads> --> e.g: ./run_cpu_nmt_l3.sh 4
+**batch size 1**
+Number of parameters	91356224	
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> output]
+  (1): nn.SeqLSTM
+  (2): nn.SeqLSTM
+  (3): nn.SeqLSTM
+}
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> output]
+  (1): nn.SeqLSTM
+  (2): nn.SeqLSTM
+  (3): nn.SeqLSTM
+  (4): nn.Sequencer @ nn.Recursor @ nn.Linear(1024 -> 40000)
+}
+==> Type is torch.FloatTensor	
+CPU Time: 244513.46087456ms	
+**batch size 16**
+Number of parameters	91356224	
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> output]
+  (1): nn.SeqLSTM
+  (2): nn.SeqLSTM
+  (3): nn.SeqLSTM
+}
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> output]
+  (1): nn.SeqLSTM
+  (2): nn.SeqLSTM
+  (3): nn.SeqLSTM
+  (4): nn.Sequencer @ nn.Recursor @ nn.Linear(1024 -> 40000)
+}
+==> Type is torch.FloatTensor	
+CPU Time: 311094.27809715ms	
+**batch size 32**
+Number of parameters	91356224	
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> output]
+  (1): nn.SeqLSTM
+  (2): nn.SeqLSTM
+  (3): nn.SeqLSTM
+}
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> output]
+  (1): nn.SeqLSTM
+  (2): nn.SeqLSTM
+  (3): nn.SeqLSTM
+  (4): nn.Sequencer @ nn.Recursor @ nn.Linear(1024 -> 40000)
+}
+==> Type is torch.FloatTensor	
+CPU Time: 378960.55197716ms	
+**batch size 64**
+Number of parameters	91356224	
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> output]
+  (1): nn.SeqLSTM
+  (2): nn.SeqLSTM
+  (3): nn.SeqLSTM
+}
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> output]
+  (1): nn.SeqLSTM
+  (2): nn.SeqLSTM
+  (3): nn.SeqLSTM
+  (4): nn.Sequencer @ nn.Recursor @ nn.Linear(1024 -> 40000)
+}
+==> Type is torch.FloatTensor	
+CPU Time: 506063.52806091ms	
+**batch size 128**
+Number of parameters	91356224	
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> output]
+  (1): nn.SeqLSTM
+  (2): nn.SeqLSTM
+  (3): nn.SeqLSTM
+}
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> output]
+  (1): nn.SeqLSTM
+  (2): nn.SeqLSTM
+  (3): nn.SeqLSTM
+  (4): nn.Sequencer @ nn.Recursor @ nn.Linear(1024 -> 40000)
+}
+==> Type is torch.FloatTensor	
+CPU Time: 771140.05208015ms	
+**batch size 256**
+Number of parameters	91356224	
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> output]
+  (1): nn.SeqLSTM
+  (2): nn.SeqLSTM
+  (3): nn.SeqLSTM
+}
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> output]
+  (1): nn.SeqLSTM
+  (2): nn.SeqLSTM
+  (3): nn.SeqLSTM
+  (4): nn.Sequencer @ nn.Recursor @ nn.Linear(1024 -> 40000)
+}
+==> Type is torch.FloatTensor	
+CPU Time: 244661.46707535ms	
+**batch size 512**
+Number of parameters	91356224	
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> output]
+  (1): nn.SeqLSTM
+  (2): nn.SeqLSTM
+  (3): nn.SeqLSTM
+}
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> output]
+  (1): nn.SeqLSTM
+  (2): nn.SeqLSTM
+  (3): nn.SeqLSTM
+  (4): nn.Sequencer @ nn.Recursor @ nn.Linear(1024 -> 40000)
+}
+==> Type is torch.FloatTensor	
+CPU Time: 423300.45294762ms	
+**batch size 930**
+Number of parameters	91356224	
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> output]
+  (1): nn.SeqLSTM
+  (2): nn.SeqLSTM
+  (3): nn.SeqLSTM
+}
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> output]
+  (1): nn.SeqLSTM
+  (2): nn.SeqLSTM
+  (3): nn.SeqLSTM
+  (4): nn.Sequencer @ nn.Recursor @ nn.Linear(1024 -> 40000)
+}
+==> Type is torch.FloatTensor	
+CPU Time: 718423.65217209ms	
