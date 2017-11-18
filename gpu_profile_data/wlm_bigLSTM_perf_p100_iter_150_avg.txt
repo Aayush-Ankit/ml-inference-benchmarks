@@ -1,0 +1,60 @@
+**batch size 1**
+
+****GPU Data (iterations time in ms)****	
+
+153.321329753
+ 
+**batch size 16**
+
+****GPU Data (iterations time in ms)****	
+
+558.590467771
+ 
+**batch size 32**
+
+****GPU Data (iterations time in ms)****	
+
+301.750850677
+ 
+**batch size 64**
+
+****GPU Data (iterations time in ms)****	
+
+438.828969002
+ 
+**batch size 128**
+
+****GPU Data (iterations time in ms)****	
+
+784.190185865
+ 
+**batch size 256**
+
+****GPU Data (iterations time in ms)****	
+
+1315.4279391
+ 
+**batch size 512**
+
+****GPU Data (iterations time in ms)****	
+
+2596.26870155
+ 
+**batch size 1024**
+
+****GPU Data (iterations time in ms)****	
+
+4949.75002607
+ 
+**batch size 2048**
+
+****GPU Data (iterations time in ms)****	
+
+9637.41275469
+ 
+**batch size 3800**
+
+****GPU Data (iterations time in ms)****	
+
+17925.2718051
+ 

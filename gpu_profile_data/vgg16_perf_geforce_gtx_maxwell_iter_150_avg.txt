@@ -1,0 +1,30 @@
+**batch size 1**
+
+****GPU Data (iteration time in ms)****	
+
+12.9605054855
+ 
+**batch size 16**
+
+****GPU Data (iteration time in ms)****	
+
+163.635341326
+ 
+**batch size 32**
+
+****GPU Data (iteration time in ms)****	
+
+335.296416283
+ 
+**batch size 64**
+
+****GPU Data (iteration time in ms)****	
+
+666.017897924
+ 
+**batch size 128**
+
+****GPU Data (iteration time in ms)****	
+
+1305.94800313
+ 

@@ -1,0 +1,56 @@
+***Alexnet Benchmarking***
+
+**batch size 1**
+
+****GPU Data (iteration time in ms)****	
+
+4.24318313599
+ 
+**batch size 16**
+
+****GPU Data (iteration time in ms)****	
+
+39.3903414408
+ 
+**batch size 32**
+
+****GPU Data (iteration time in ms)****	
+
+72.996600469
+ 
+**batch size 64**
+
+****GPU Data (iteration time in ms)****	
+
+140.766660372
+ 
+**batch size 128**
+
+****GPU Data (iteration time in ms)****	
+
+282.326157888
+ 
+**batch size 256**
+
+****GPU Data (iteration time in ms)****	
+
+559.561546644
+ 
+**batch size 512**
+
+****GPU Data (iteration time in ms)****	
+
+1111.0143741
+ 
+**batch size 1024**
+
+****GPU Data (iteration time in ms)****	
+
+2214.75453377
+ 
+**batch size 2048**
+
+****GPU Data (iteration time in ms)****	
+
+4426.05722745
+ 
