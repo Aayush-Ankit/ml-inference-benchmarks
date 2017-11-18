@@ -6,6 +6,6 @@ nmt_l5 --> 350 to 360 W (peak)
 vgg16  --> 350 to 400 W (peak)
 wlm_anotherLSTM --> 280 to 410 W (peak)
 wlm_bigLSTM --> 330 to 440 W (peak)
-
+vgg19 --> 290 to 380 W (peak)
 
 
